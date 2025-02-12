@@ -1,13 +1,13 @@
 spring:
   application:
     name: user-service
-  
+
   datasource:
     url: jdbc:mysql://localhost:3306/userdb
     username: root
     password: 
     driver-class-name: com.mysql.cj.jdbc.Driver
-  
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -49,4 +49,4 @@ spring:
     url: http://localhost:4200
 
 # Spring Cloud Config Client Configuration
-spring.cloud.config.uri: http://localhost:8888  # L'URL du serveur de configuration
+spring.cloud.config.uri: http://localhost:8888
