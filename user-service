@@ -1,21 +1,25 @@
 spring:
   application:
     name: user-service
+  
   datasource:
     url: jdbc:mysql://localhost:3306/userdb
     username: root
     password: 
     driver-class-name: com.mysql.cj.jdbc.Driver
+  
   jpa:
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
+
   servlet:
     multipart:
       max-file-size: 10MB
       max-request-size: 10MB
+
   doc:
     api-docs:
       path: /api-docs
@@ -23,8 +27,10 @@ spring:
       enabled: true
       path: /swagger-ui.html
       persist-authorization: true
+
   security:
     enabled: false
+
   mail:
     host: smtp.gmail.com
     port: 587
@@ -34,8 +40,13 @@ spring:
       mail.smtp.auth: true
       mail.smtp.starttls.enable: true
       mail.smtp.ssl.trust: smtp.gmail.com
+
   logging:
     level:
       org.springdoc: DEBUG
+
   front:
     url: http://localhost:4200
+
+# Spring Cloud Config Client Configuration
+spring.cloud.config.uri: http://localhost:8888  # L'URL du serveur de configuration
