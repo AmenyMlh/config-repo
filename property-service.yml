@@ -28,3 +28,6 @@ spring:
       org.springdoc: DEBUG
   front:
     url: http://localhost:4200
+
+  # Spring Cloud Config Client Configuration
+spring.cloud.config.uri: http://localhost:8888  # L'URL du serveur de configuration
